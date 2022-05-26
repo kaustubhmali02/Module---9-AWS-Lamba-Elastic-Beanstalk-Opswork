@@ -1,7 +1,4 @@
 # Program to convert Json Files to yaml and transfer it to appropriate S3 buckets
-
-from asyncio.windows_events import NULL
-from distutils import extension
 import json
 import os.path
 import time
