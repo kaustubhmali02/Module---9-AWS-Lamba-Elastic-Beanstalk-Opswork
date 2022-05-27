@@ -11,7 +11,7 @@ print('Function start (CloudWatch)')
 s3 = boto3.client('s3')
 
 
-def lamda_handler(event, context):
+def lambda_handler(event, context):
     source_bucket = event['Records'][0]['s3']['bucket']['name']
     key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'])
     copy_source = {'Bucket': source_bucket, 'Key': key}
